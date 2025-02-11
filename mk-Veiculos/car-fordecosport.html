@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mk - Veículos</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+// @Summary 登录
+// @Description 登录
+// @Produce json
+// @Param body body controllers.LoginParams true "body参数"
+// @Success 200 {string} string "ok" "返回用户信息"
+// @Failure 400 {string} string "err_code：10002 参数错误； err_code：10003 校验错误"
+// @Failure 401 {string} string "err_code：10001 登录失败"
+// @Failure 500 {string} string "err_code：20001 服务错误；err_code：20002 接口错误；err_code：20003 无数据错误；err_code：20004 数据库异常；err_code：20005 缓存异常"
+// @Router /user/person/login [post]
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <div class="logo d-flex align-items-center me-auto me-lg-0">
+          <img class="img-fluid" src="assets/img/headerLogo.png" alt="" style="height: 50px;" />
+        </div>
+      </a>
+      <div style="padding: 0;">
+      </div>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="index.html" class="active">Home<br /></a>
+          </li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#galeria">Galeria</a></li>
+          <li><a href="index.html#estatisticas">Estatísticas</a></li>
+          <li><a href="index.html#avaliacao">Avaliações</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section id="portfolio-details" class="portfolio-details section mt-5">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/cars/FORDECOSPORT/1.PNG" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/cars/FORDECOSPORT/2.PNG" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/cars/FORDECOSPORT/3.PNG" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/cars/FORDECOSPORT/4.PNG" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/cars/FORDECOSPORT/5.PNG" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/cars/FORDECOSPORT/6.PNG" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/cars/FORDECOSPORT/7.PNG" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Informações do carro</h3>
+              <ul>
+                <li><strong>Marca</strong>: Ford</li>
+                <li><strong>Modelo</strong>: ECOSPORT FreeStyle 1.6 </li>
+                <li><strong>Ano</strong>: 2013</li>
+                <li><strong>KM</strong>: 121.000</li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Leia um pouco mais sobre o carro</h2>
+              <p>
+                O FordEcoSport é um veículo utilitário esportivo produzido pela Ford Motor Company. O modelo brasileiro
+                é fabricado na fábrica de Camaçari, na Bahia, e é exportado para vários países da América Latina e da
+                Europa. O EcoSport é um dos modelos mais vendidos da Ford no Brasil e é muito popular em razão de sua
+                versatilidade, robustez e economia. Com sua carroceria compacta e suas rodas de 15 polegadas, o EcoSport
+                é ideal para a cidade e para as estradas. Além disso, seu motor 1.6 litro de 110 cv e seu câmbio manual
+                de 5 velocidades fazem com que o veículo seja rápido e eficiente.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <img class="img-fluid" src="assets/img/logo.png" alt="MK" style="width: 500px; height: auto;" />
+          </div>
+          <div class="col-lg-12 footer-about d-flex align-items-center justify-content-center">
+            <!-- <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">MK</span>
+            </a> -->
+            <!-- <div class="footer-contact pt-3">
+              <p>Av. Roberto Silveira 782, Magé - RJ, Cep 25935514</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div> -->
+            <div class="social-links d-flex mt-4">
+              <a target="_blank" href="https://www.tiktok.com/@munizveiculos?_t=ZM-8svQNChoa0L&_r=1"><i
+                  class="bi bi-tiktok"></i></a>
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=61569297495923"><i
+                  class="bi bi-facebook"></i></a>
+              <a target="_blank" href="https://www.instagram.com/mk_veiculos_/"><i class="bi bi-instagram"></i></a>
+              <a target="_blank" href="https://wa.me/5521982144287"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container text-center">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">G7 Soluções Digitais</strong>
+          <span>2025</span>
+        </p>
+        <div class="credits">
+          Designed by
+          <a href="#">Phelipe Curty</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
